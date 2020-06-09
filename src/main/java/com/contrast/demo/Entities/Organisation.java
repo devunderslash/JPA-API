@@ -1,8 +1,5 @@
 package com.contrast.demo.Entities;
 
-
-import org.hibernate.annotations.GeneratorType;
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -28,15 +25,11 @@ public class Organisation {
     @Column(name = "name")
     private String name;
 
-
-//    @OneToMany(mappedBy = "organisation", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     @OneToMany(targetEntity = Application.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "org_fk", referencedColumnName = "id")
     private List<Application> applications;
 
-    public Organisation(List<Application> applicationList) {
-        this.applications = applicationList;
-    }
+
 
     public Long getId() {
         return id;

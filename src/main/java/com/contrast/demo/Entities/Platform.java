@@ -3,29 +3,25 @@ package com.contrast.demo.Entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Apps")
-public class Application {
+@Table(name = "Plats")
+public class Platform {
 
-    public Application(String name, Platform platform) {
+    public Platform(String name) {
         this.name = name;
-        this.platform = platform;
     }
 
-    public Application() {
+    public Platform() {
         super();
     }
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
 
     @Column(name = "name")
     private String name;
 
-    @OneToOne(targetEntity = Platform.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "app_fk", referencedColumnName = "id")
-    private Platform platform;
 
 
     public Long getId() {
@@ -43,14 +39,5 @@ public class Application {
     public void setName(String name) {
         this.name = name;
     }
-
-    public Platform getPlatform() {
-        return platform;
-    }
-
-    public void setPlatform(Platform platform) {
-        this.platform = platform;
-    }
-
 
 }
