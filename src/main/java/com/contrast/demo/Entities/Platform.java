@@ -23,7 +23,6 @@ public class Platform {
     private String name;
 
 
-
     public Long getId() {
         return id;
     }
