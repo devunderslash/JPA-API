@@ -1,7 +1,9 @@
 package com.contrast.demo.Entities;
 
+import lombok.ToString;
 import javax.persistence.*;
 
+@ToString
 @Entity
 @Table(name = "Plats")
 public class Platform {
@@ -17,6 +19,7 @@ public class Platform {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
     @Column(name = "name")

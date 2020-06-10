@@ -1,8 +1,10 @@
 package com.contrast.demo.Entities;
 
+import lombok.ToString;
 import javax.persistence.*;
 import java.util.List;
 
+@ToString
 @Entity
 @Table(name = "Orgs")
 public class Organisation {
@@ -25,10 +27,13 @@ public class Organisation {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(targetEntity = Application.class, cascade = CascadeType.ALL)
+    @OneToMany(targetEntity = Application.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
     @JoinColumn(name = "org_fk", referencedColumnName = "id")
     private List<Application> applications;
 
+    public Organisation(List<Application> applicationList) {
+        this.applications = applicationList;
+    }
 
 
     public Long getId() {

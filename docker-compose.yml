@@ -9,6 +9,8 @@ services:
       - MYSQL_DATABASE=contrastdb
       - MYSQL_USER=contrast-user
       - MYSQL_PASSWORD=isaythebestwords
+    volumes:
+      - ./src/main/resources:/docker-entrypoint-initdb.d
     ports:
       - 3306:3306
 

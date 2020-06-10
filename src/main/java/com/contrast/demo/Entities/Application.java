@@ -1,7 +1,9 @@
 package com.contrast.demo.Entities;
 
+import lombok.ToString;
 import javax.persistence.*;
 
+@ToString
 @Entity
 @Table(name = "Apps")
 public class Application {
@@ -23,8 +25,8 @@ public class Application {
     @Column(name = "name")
     private String name;
 
-    @OneToOne(targetEntity = Platform.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "app_fk", referencedColumnName = "id")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "app_fk")
     private Platform platform;
 
 
