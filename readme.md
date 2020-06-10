@@ -111,7 +111,7 @@ ORDER BY ap.name ASC;
 
 ## FUTURE Features
 
--Adminer add to Docker-compose for MySQL viewing in browser
+- Adminer add to Docker-compose for MySQL viewing in browser
 
 
 ## OTHER
