@@ -14,6 +14,7 @@ Alternatively you can use your desired means of testing such as Postman, or go s
 
 **THAT'S IT!**
 
+
 ##What is This?
 
 The following project is used to Demo JPA with One-To-Many, One-To-One entity types with GET functionality. The Entities used are:
@@ -34,7 +35,7 @@ Use the following for GET, POST and PUT
 - GET http://localhost:8080/organisations/{id}
 
 - POST http://localhost:8080/organisations
-{
+`{
   "name": "<Organisation Name>",
   "applications": [{
       "name": "<App Name>",
@@ -42,10 +43,10 @@ Use the following for GET, POST and PUT
         "name": "<Platform Name>"
       }
     }]
-}
+}`
 
 - PUT http://localhost:8080/organisations
-{
+`{
   "name": "<UpdateHere>",
   "applications": [{
       "name": "<Update Here>",
@@ -53,7 +54,7 @@ Use the following for GET, POST and PUT
         "name": "<Update Here>"
       }
     }]
-}
+}`
 
 
 **MySQL setup**
