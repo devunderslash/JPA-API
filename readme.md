@@ -44,13 +44,9 @@ API Calls:
 The current solution uses MySQL, with your desired data browser (MySQLWorkbench used for solution) you can see the saved data via the following connection details:
 
 -- Standard TCP/IP
-
 -- HostName: 127.0.0.1
-
 -- Port: 3306
-
 -- Username: contrast-user
-
 -- Pass: isaythebestwords (Favourite Donald quote of all time!)
 
 
@@ -58,7 +54,6 @@ COMING SOON -
 
 - GET http://localhost:8080/organisations/{id}/applications
 - Query and Sort Functionality
-- DB Script for data pre-population
 
 FUTURE Features
 
