@@ -1,6 +1,6 @@
-#SpringBoot JPA API with Java8, Tomcat9 and MySQL8 on Docker
+# SpringBoot JPA API with Java8, Tomcat9 and MySQL8 on Docker
 
-##Project Set-up
+## Project Set-up
 
 To run the application pop the following into your terminal whilst in Root project folder:
 
@@ -15,7 +15,7 @@ Alternatively you can use your desired means of testing such as Postman, or go s
 **THAT'S IT!**
 
 
-##What is This?
+## What is This?
 
 The following project is used to Demo JPA with One-To-Many, One-To-One entity types with GET functionality. The Entities used are:
 * Organisation (has)
@@ -25,7 +25,7 @@ The following project is used to Demo JPA with One-To-Many, One-To-One entity ty
 This project is as minimal as possible through using the JPA CRUDRepository to do all the dirty work. That said creating queries cannot be avoided if specific information is requested via @GetMappings.
 
 
-##Further Details
+## Further Details
 
 **API Calls**
 
@@ -104,17 +104,17 @@ WHERE og.id = 1
 ORDER BY ap.name ASC;
 ``
 
-##COMING SOON - 
+## COMING SOON - 
 
 - GET http://localhost:8080/organisations/{id}/applications
 - Query and Sort Functionality
 
-##FUTURE Features
+## FUTURE Features
 
 -Adminer add to Docker-compose for MySQL viewing in browser
 
 
-##OTHER
+## OTHER
 
 - JetBrains IntelliJ used for development
 
