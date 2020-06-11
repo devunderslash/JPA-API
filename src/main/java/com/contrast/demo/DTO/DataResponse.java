@@ -11,7 +11,7 @@ import lombok.ToString;
 @ToString
 public class DataResponse {
 
-    private String name;
-    private String Application_name;
+    private String AppName;
+    private String PlatName;
 
 }

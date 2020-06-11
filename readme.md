@@ -33,6 +33,9 @@ Use the following for GET, POST and PUT
 
 - GET http://localhost:8080/organisations
 - GET http://localhost:8080/organisations/{id}
+- GET http://localhost:8080/organisations/{id}/applications
+- GET http://localhost:8080/organisations/{id}/applications?query=<INSERT App name or PARTIAL App name HERE>
+- GET http://localhost:8080/organisations/{id}/applications?query=<VALUE>&order="name `asc|desc`"
 
 - POST http://localhost:8080/organisations
 `{
@@ -106,8 +109,8 @@ ORDER BY ap.name ASC;
 
 ## COMING SOON - 
 
-- GET http://localhost:8080/organisations/{id}/applications
-- Query and Sort Functionality
+- Query and Sort Functionality Response Object to be Created
+- Examples of Usage
 
 ## FUTURE Features
 
@@ -117,6 +120,10 @@ ORDER BY ap.name ASC;
 ## OTHER
 
 - JetBrains IntelliJ used for development
+
+**Known Issues**
+- mbind with MySQL inDocker
+- Platform relationship needs resolved
 
 
 
