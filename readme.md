@@ -4,7 +4,11 @@
 
 To run the application pop the following into your terminal whilst in Root project folder:
 
-docker-compose up --build
+- sh runDemo.sh (Kinda hacky way to build Maven, give it time to build and run docker-compose up --build)
+
+*OR*
+
+- Maven Build Locally (mvn clean package) and Run docker-compose up --build
 
 Navigate to localhost:8080 which will allow you to use the HAL Browser to use CRUD functions to GET and POST.
 
@@ -34,8 +38,6 @@ Use the following for GET, POST and PUT
 - GET http://localhost:8080/organisations
 - GET http://localhost:8080/organisations/{id}
 - GET http://localhost:8080/organisations/{id}/applications
-- GET http://localhost:8080/organisations/{id}/applications?query=<INSERT App name or PARTIAL App name HERE>
-- GET http://localhost:8080/organisations/{id}/applications?query=<VALUE>&order="name `asc|desc`"
 
 - POST http://localhost:8080/organisations
 `{
@@ -109,8 +111,10 @@ ORDER BY ap.name ASC;
 
 ## COMING SOON - 
 
+- Routing for GET http://localhost:8080/organisations/{id}/applications?query=<INSERT App name or PARTIAL App name HERE>
+- Routing for GET http://localhost:8080/organisations/{id}/applications?query=<VALUE>&order="name `asc|desc`"
 - Query and Sort Functionality Response Object to be Created
-- Examples of Usage
+- Examples of Usage in README
 
 ## FUTURE Features
 
@@ -120,6 +124,7 @@ ORDER BY ap.name ASC;
 ## OTHER
 
 - JetBrains IntelliJ used for development
+- Multiple GetMapping requests on top of the same URL requires a class to look after it, I was hoping JPA bent these rules a bit.
 
 **Known Issues**
 - mbind with MySQL inDocker

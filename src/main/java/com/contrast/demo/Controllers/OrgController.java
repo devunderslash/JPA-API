@@ -22,42 +22,44 @@ public class OrgController {
 
     @GetMapping("/organisations/{id}/applications")
     public Iterable<Organisation> retrieveApps(@PathVariable long id) {
-
+        //TODO - Good starting point but need a structure to return apps only (DTO)
         Iterable<Organisation> appList = orgRepository.findApplications(id);
 
         return appList;
     }
 
-    @GetMapping("/organisations/{id}/applications?query={name}")
-    public Iterable<Organisation> retrieveAppsPartial(@PathVariable long id, @RequestParam("query") String name ) {
+ /** Multiple GetMappings will require Routing **/
 
-        List<Organisation> appListQueryResult = orgRepository.findApplicationPartial(id, name);
-
-        return appListQueryResult;
-    }
-
-    @GetMapping("/organisations/{id}/applications?query={name}&order={sort}")
-    public Iterable<Organisation> retrieveAppsPartialSort(@PathVariable long id, @RequestParam("query") String name, @RequestParam("order") String sort) {
-
-        //TODO - Move to Util Class as Sort Method
-        String sortOrder = "asc";
-
-        if(sort.equals("'name desc'"))
-            sortOrder = "desc";
-
-
-        Iterable<Organisation> appListQueryResult = orgRepository.findApplicationPartialSort(id, name, sortOrder);
-
-        return appListQueryResult;
-    }
-
-    @GetMapping("/organisations/{id}/applications?order={sort}")
-    public Iterable<Organisation> retrieveAppsSort(@RequestParam("order") long id, String sort) {
-
-        Iterable<Organisation> appListQueryResult = orgRepository.findApplicationSort(id, sort);
-
-        return appListQueryResult;
-    }
+//    @GetMapping("/organisations/{id}/applications?query={name}")
+//    public Iterable<Organisation> retrieveAppsPartial(@PathVariable long id, @RequestParam("query") String name ) {
+//        //TODO - Good starting point but need a structure to return apps only (DTO)
+//        List<Organisation> appListQueryResult = orgRepository.findApplicationPartial(id, name);
+//
+//        return appListQueryResult;
+//    }
+//
+//    @GetMapping("/organisations/{id}/applications?query={name}&order={sort}")
+//    public Iterable<Organisation> retrieveAppsPartialSort(@PathVariable long id, @RequestParam("query") String name, @RequestParam("order") String sort) {
+//
+//        //TODO - Move to Util Class as Sort Method
+//        String sortOrder = "asc";
+//
+//        if(sort.equals("'name desc'"))
+//            sortOrder = "desc";
+//
+//
+//        Iterable<Organisation> appListQueryResult = orgRepository.findApplicationPartialSort(id, name, sortOrder);
+//
+//        return appListQueryResult;
+//    }
+//
+//    @GetMapping("/organisations/{id}/applications?order={sort}")
+//    public Iterable<Organisation> retrieveAppsSort(@RequestParam("order") long id, String sort) {
+//
+//        Iterable<Organisation> appListQueryResult = orgRepository.findApplicationSort(id, sort);
+//
+//        return appListQueryResult;
+//    }
 
 
 
